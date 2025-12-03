@@ -1,0 +1,32 @@
+# --- Core Framework ---
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+pydantic==2.6.1
+pydantic-settings==2.2.1
+python-multipart==0.0.9
+
+# --- Database ---
+sqlalchemy==2.0.27
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# --- Authentication & Security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# --- AI & Machine Learning ---
+# Gunakan tensorflow-cpu agar lebih ringan saat deploy
+tensorflow-cpu==2.15.0
+# Wajib headless untuk server (Railway/Docker)
+opencv-python-headless==4.9.0.80
+mediapipe==0.10.9
+google-generativeai==0.3.2
+pillow==10.2.0
+numpy==1.26.4
+h5py==3.10.0
+
+# --- Utilities ---
+python-dateutil==2.8.2
+pytz==2024.1
+requests==2.31.0

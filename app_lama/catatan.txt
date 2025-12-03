@@ -1,0 +1,3 @@
+database public url : postgresql://postgres:cKnhppWfkEsZTzyttXMJXmmZtftOpBun@caboose.proxy.rlwy.net:30853/railway
+
+database url : postgresql://postgres:cKnhppWfkEsZTzyttXMJXmmZtftOpBun@postgres.railway.internal:5432/railway
