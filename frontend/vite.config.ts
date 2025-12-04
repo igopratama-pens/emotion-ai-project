@@ -10,9 +10,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // Konfigurasi untuk Local Development (npm run dev)
   server: {
     port: 5173,
-    // Proxy API calls to backend (optional, for development)
     proxy: {
       '/api': {
         target: 'http://localhost:8000',
@@ -21,4 +21,12 @@ export default defineConfig({
       },
     },
   },
+  // ✅ KONFIGURASI BARU UNTUK RAILWAY (npm run preview)
+  preview: {
+    host: true, // Wajib true agar bisa diakses publik
+    port: 8080, // Port standar untuk preview
+    allowedHosts: [
+      "lucky-nurturing-production.up.railway.app" // Domain kamu didaftarkan disini
+    ]
+  }
 })
