@@ -2,6 +2,16 @@
 
 **AI-Powered Mental Health Companion untuk Remaja dan Mahasiswa**
 
+## 👥 Anggota Kelompok (Our Team)
+
+| Nama | NIM | Peran |
+| :--- | :--- | :--- |
+| **Muhammad Igo Pratama** | 3323600031 | Data Scientist / Model Training |
+| **Alrahma Dinda Salsabila** | 3323600038 | Backend Developer |
+| **Evinda Eka Ayudia Lestari** | 3323600039 | Backend Developer |
+| **Nur Aghni Rizqiyah Baharawi** | 3323600058 | Frontend Developer |
+| **R.Aj Maria Shovia Fadinda** | 3323600059 | Frontend Developer |
+
 > Sistem deteksi emosi real-time dengan AI chatbot empathic dan rekomendasi personal menggunakan Deep Learning, FastAPI, dan React.
 
 ---
@@ -757,15 +767,3 @@ python -c "import google.generativeai as genai; genai.configure(api_key='YOUR_KE
 rm -rf node_modules package-lock.json
 npm install
 ```
-
----
-
-## 📞 Support
-
-For questions or issues:
-- **Technical**: [email@example.com]
-- **Mental Health Resources**: Call **119 ext 8** (Sehat Jiwa)
-
----
-
-*Last Updated: January 2025*
