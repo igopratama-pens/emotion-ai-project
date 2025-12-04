@@ -1,27 +1,29 @@
-# 1. Gunakan Python 3.10 sebagai dasar
+# 1. Gunakan Base Image Python 3.10 (Versi Slim agar ringan)
 FROM python:3.10-slim
 
-# 2. Install library sistem Linux yang hilang (Obat error libGL)
+# 2. Install System Dependencies (UPDATE FIX)
+# 'libgl1-mesa-glx' diganti jadi 'libgl1' karena versi lama sudah deprecated
 RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
     libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. Buat folder kerja di dalam server
+# 3. Set Working Directory
 WORKDIR /app
 
-# 4. Copy daftar library python kamu
+# 4. Copy Requirements dulu
 COPY requirements.txt .
 
-# 5. Install library python (FastAPI, TensorFlow, dll)
+# 5. Install Python Dependencies
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# 6. Copy semua kodingan backend kamu
+# 6. Copy seluruh kode aplikasi
 COPY . .
 
-# 7. Perintah untuk menyalakan server saat deploy selesai
+# 7. Perintah untuk menjalankan aplikasi
+# Menggunakan variabel PORT dari Railway
 CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
